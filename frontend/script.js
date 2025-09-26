@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === DOM Element Selectors ===
+    //  DOM Element Selectors 
     const chatMessages = document.getElementById('chatMessages');
     const userInput = document.getElementById('userInput');
     const sendBtn = document.getElementById('sendBtn');
@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMain = document.querySelector('.chat-main');
     const welcomeSection = document.querySelector('.welcome-section');
 
-    // === Application State ===
+    //  Application State 
     let currentQuery = '';
     let currentPersonaContainer = null;
 
-    // === Configuration ===
+    //  Configuration 
     const BACKEND_URL = 'http://localhost:3000/api/echo'; 
 
-    // === Event Listeners ===
+    //  Event Listeners 
     sendBtn.addEventListener('click', handleSendMessage);
 
     userInput.addEventListener('keydown', (event) => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === Helper Functions ===
+    //  Helper Functions 
 
     /**
      * Converts basic Markdown to HTML.
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // === Main Functions ===
+    //  Main Functions 
 
     /**
      * Handles the user's message submission.
