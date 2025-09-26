@@ -4,7 +4,3 @@ backend/.env
 # Ignore backend node_modules
 backend/node_modules/
 
-# General ignores
-.DS_Store
-npm-debug.log
-yarn-error.log
