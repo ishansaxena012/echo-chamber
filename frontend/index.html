@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoChamber AI</title>
+    
+    <!-- Use a modern font from Google Fonts for a clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Link to your local CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="chat-container">
+        
+        <!-- Header with the main title and theme toggle -->
+        <header class="chat-header">
+            <h1>ECHO CHAMBER AI</h1>
+            <button class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Main content area for messages and persona cards -->
+        <main class="chat-main">
+            <!-- The welcome section with persona cards. Only visible on initial load. -->
+            <section class="welcome-section">
+                <p class="welcome-text">Start by entering a thought or topic, then choose the AI persona that will echo your voice.</p>
+                
+                <div class="persona-card-container">
+                    <div class="persona-grid">
+                        <button class="persona-card" data-persona="optimistic" aria-label="Select Optimistic persona">
+                            <i class="fa-solid fa-face-laugh"></i> <span>Optimistic</span>
+                        </button>
+                        <button class="persona-card" data-persona="sarcastic" aria-label="Select Sarcastic persona">
+                            <i class="fa-solid fa-face-rolling-eyes"></i> <span>Sarcastic</span>
+                        </button>
+                        <button class="persona-card" data-persona="philosophical" aria-label="Select Philosophical persona">
+                            <i class="fa-solid fa-brain"></i> <span>Philosophical</span>
+                        </button>
+                        <button class="persona-card" data-persona="realistic" aria-label="Select Practical persona">
+                            <i class="fa-solid fa-clipboard-check"></i> <span>Practical</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- This is the area where chat messages and responses will appear -->
+            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+            </div>
+        </main>
+
+        <!-- Fixed input area at the bottom -->
+        <footer class="chat-input-area">
+            <textarea
+              class="chat-input"
+              id="userInput"
+              placeholder="Type your thought or topic here..."
+              rows="1"
+              aria-label="Your message"
+            ></textarea>
+
+            <button id="sendBtn" class="send-btn" aria-label="Send message">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </footer>
+
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

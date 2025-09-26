@@ -1,0 +1,24 @@
+{
+  "name": "echochamber-backend",
+  "version": "1.0.0",
+  "description": "Backend for the EchoChamber web application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node -r dotenv/config server.js"
+  },
+  "keywords": [
+    "express",
+    "gemini",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
